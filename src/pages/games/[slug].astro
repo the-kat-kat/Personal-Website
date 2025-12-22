@@ -22,8 +22,12 @@ const { game } = Astro.props;
         src={game.embedUrl}
         width="100%"
         height="100%"
-        class="border-none"
-        allowfullscreen></iframe>
+        class="block w-full h-full border-none object-cover"
+        allowfullscreen
+        ></iframe>
+
+        <div class="absolute inset-0 border-[6px] border-black pointer-events-none rounded-xl"></div>
+        <div class="absolute inset-0 border border-white/10 pointer-events-none rounded-xl"></div>
     </div>
 
     <div

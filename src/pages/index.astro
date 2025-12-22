@@ -7,33 +7,54 @@ import { games } from "../data/games.js";
 ---
 
 <Layout title="Kat's Korner">
-  <body>
-    <p class="text-xl">Welcome to Astro!</p>
-    <ul class="space-y-4">
-      <li><a href="/posts/post-1/">Post 1</a></li>
-    </ul>
-  </body>
+  <!-- Projects -->
+  <div class="w-full">
+    <h1 class="text-3xl justify-self-center p-4">Projects</h1>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-9 max-w-5xl mx-auto"
+    >
+      {
+        games.map((game) => (
+          <a href={`/games/${game.slug}`} class="group block">
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:bg-white/10 shadow-xl">
+              <img
+                src={game.previewImage}
+                alt={game.title}
+                class="w-full aspect-video object-cover"
+              />
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-9 max-w-5xl mx-auto">
-    {
-      games.map((game) => (
-        <a href={`/games/${game.slug}`} class="group block">
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:bg-white/10 shadow-xl">
-            <img
-              src={game.previewImage}
-              alt={game.title}
-              class="w-full aspect-video object-cover"
-            />
-
-            <div class="p-6">
-              <h2 class="text-2xl font-sans text-rose-300 group-hover:text-rose-200">
-                {game.title}
-              </h2>
-              <p class="text-white/60 mt-2">{game.description}</p>
+              <div class="p-6">
+                <h2 class="text-2xl text-rose-300 group-hover:text-rose-200">
+                  {game.title}
+                </h2>
+                <p class="text-white/60 mt-2">{game.description}</p>
+              </div>
             </div>
-          </div>
-        </a>
-      ))
-    }
+          </a>
+        ))
+      }
+    </div>
   </div>
+
+  <!--On Top -->
+  <div class="fixed top-10 w-full z-50">
+    <img
+      id="heart-button"
+      src="/assets/heart.png"
+      alt="hamster with a heart"
+      class="w-1/6 cusor-pointer hover:scale-[1.1] transition-transform"
+    />
+    <audio id="heart-music" src="/assets/turn-it-up.mp3"></audio>
+  </div>
+
+  <script>
+    const heartButton = document.getElementById("heart-button");
+    const music = document.getElementById("heart-music");
+
+    if (heartButton && music) {
+      heartButton.addEventListener("click", () => {
+        (music as HTMLAudioElement).play();
+      });
+    }
+  </script>
 </Layout>

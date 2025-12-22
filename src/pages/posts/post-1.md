@@ -23,4 +23,3 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my journey as 
 
 ## What's next
 
-My son is a genius akjsfhssdfs

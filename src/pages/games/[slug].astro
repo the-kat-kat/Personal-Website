@@ -31,8 +31,23 @@ const { game } = Astro.props;
     </div>
 
     <div
-      class="mt-8 p-6 bg-white/5 backdrop-blur-md rounded-lg border border-white/10 max-w-2xl text-center"
+      class="mt-8 p-6 bg-white/5 backdrop-blur-md rounded-lg border border-white/10 max-w-4xl text-center"
     >
+      <h2 class="text-xl mb-2 text-rose-300">Instructions</h2>
+      <p class="text-white leading-relaxed mb-2">{game.instructions}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+        {
+            game.screenshots?.map((img) => (
+                <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <img
+                    src={img}
+                    alt={`Screenshot for ${game.title}`}
+                    class="w-full aspect-video object-cover"
+                    />
+                </div>
+            ))
+        }
+      </div>
       <h2 class="text-xl mb-2 text-rose-300">About the Game</h2>
       <p class="text-white/80 leading-relaxed">{game.description}</p>
     </div>

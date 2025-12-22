@@ -11,8 +11,8 @@ export const games = [
     height: "600",
   },
   {
-    slug: "song-of-the-sea",
-    title: "Song of the Sea",
+    slug: "mc-nugget",
+    title: "Yum",
     description: "A dreamy underwater game with surprising vision mechanics",
     previewImage: "/assets/heart.png",
     embedUrl: "/games/SOTS/index.html",
@@ -20,8 +20,8 @@ export const games = [
     height: "600",
   },
   {
-    slug: "song-of-the-sea",
-    title: "Song of the Sea",
+    slug: "bloo",
+    title: "Bloo",
     description: "A dreamy underwater game with surprising vision mechanics",
     previewImage: "/assets/heart.png",
     embedUrl: "/games/SOTS/index.html",

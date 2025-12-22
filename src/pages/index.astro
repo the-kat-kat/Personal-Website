@@ -7,54 +7,97 @@ import { games } from "../data/games.js";
 ---
 
 <Layout title="Kat's Korner">
-  <!-- Projects -->
-  <div class="w-full">
-    <h1 class="text-3xl justify-self-center p-4">Projects</h1>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-9 max-w-5xl mx-auto"
-    >
-      {
-        games.map((game) => (
-          <a href={`/games/${game.slug}`} class="group block">
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:bg-white/10 shadow-xl">
-              <img
-                src={game.previewImage}
-                alt={game.title}
-                class="w-full aspect-video object-cover"
-              />
-
-              <div class="p-6">
-                <h2 class="text-2xl text-rose-300 group-hover:text-rose-200">
-                  {game.title}
-                </h2>
-                <p class="text-white/60 mt-2">{game.description}</p>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+  <!--Background -->
+  <div class="fixed top-0 w-full -z-50">
+    <img src="/assets/heart.png" alt="heart behind" />
   </div>
-
-  <!--On Top -->
-  <div class="fixed top-10 w-full z-50">
-    <img
-      id="heart-button"
-      src="/assets/heart.png"
-      alt="hamster with a heart"
-      class="w-1/6 cusor-pointer hover:scale-[1.1] transition-transform"
-    />
-    <audio id="heart-music" src="/assets/turn-it-up.mp3"></audio>
-  </div>
-
-  <script>
-    const heartButton = document.getElementById("heart-button");
-    const music = document.getElementById("heart-music");
-
-    if (heartButton && music) {
-      heartButton.addEventListener("click", () => {
-        (music as HTMLAudioElement).play();
-      });
-    }
-  </script>
 </Layout>
+
+<!-- Projects -->
+<div class="w-full">
+  <h1 class="text-3xl justify-self-center p-4">Projects</h1>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-9 max-w-5xl mx-auto"
+  >
+    {
+      games.map((game) => (
+        <a href={`/games/${game.slug}`} class="group block">
+          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:bg-white/10 shadow-xl">
+            <img
+              src={game.previewImage}
+              alt={game.title}
+              class="w-full aspect-video object-cover"
+            />
+
+            <div class="p-6">
+              <h2 class="text-2xl text-rose-300 group-hover:text-rose-200">
+                {game.title}
+              </h2>
+              <p class="text-white/60 mt-2">{game.description}</p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<!--On Top -->
+<div class="fixed top-10 left-10 w-full z-50">
+  <img
+    id="heart-button"
+    src="/assets/heart.png"
+    alt="hamster with a heart"
+    class="w-1/6 cusor-pointer hover:scale-[1.1] transition-transform"
+  />
+  <audio id="heart-music" src="/assets/turn-it-up.mp3"></audio>
+
+  <div
+    id="now-playing"
+    class="opacity-0 w-1/4 transition-opacity duration-1000 mb-2 bg-white/30 backdrop-blur-md text-white px-4 py-1 rounded-full text-sm"
+  >
+    Now Playing: None
+  </div>
+</div>
+
+<script>
+  const playlist = [
+    {
+      title: "Turn it Up",
+      file: "/assets/turn-it-up.mp3",
+    },
+  ];
+
+  const heartButton = document.getElementById("heart-button");
+  const music = document.getElementById("heart-music") as HTMLAudioElement;
+  const nowBox = document.getElementById("now-playing");
+
+  let isPlaying = false;
+
+  if (heartButton && music && nowBox) {
+    heartButton.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * playlist.length);
+      const randomTrack = playlist[randomIndex];
+
+      music.src = randomTrack.file;
+      music.play();
+
+      nowBox.innerText = `Now Playing: ${randomTrack.title}`;
+      isPlaying = true;
+      nowBox.classList.remove("opacity-0");
+      nowBox.classList.add("opacity-100");
+    });
+
+    heartButton.addEventListener("mouseenter", () => {
+      if (isPlaying) {
+        nowBox.classList.remove("opacity-0");
+        nowBox.classList.add("opacity-100");
+      }
+    });
+
+    heartButton.addEventListener("mouseleave", () => {
+      nowBox.classList.remove("opacity-100");
+      nowBox.classList.add("opacity-0");
+    });
+  }
+</script>

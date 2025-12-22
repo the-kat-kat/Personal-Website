@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-    --font-family-sans: "CatSong", sans-serif;
+    --font-family-sans: "CatSong", ui-sans-serif, system-ui, sans-serif;
 }
 
 @font-face {
     font-family: 'CatSong';
-    src: url('/fonts/CatSong.ttf') format('truetype');
+    src: url('/fonts/catsong.ttf') format('truetype');
     font-weight: normal;
     font-display: swap;
 }
 
-html, body {
+:root {
     font-family: "CatSong", sans-serif;
 }

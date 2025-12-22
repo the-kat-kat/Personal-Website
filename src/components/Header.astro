@@ -1,27 +1,29 @@
 ---
-import Logo from './Logo.astro'
-import Nav from './Nav.astro'
+// src/components/Header.astro
 
-const {current = ' '} = Astro.props;
+const { current = " " } = Astro.props;
 ---
 
 <style>
-    header {
-        display: flex;
-        margin: 0 auto;
-        max-width: 1400px;
-        padding: 2em;
-        width: 100%;
-    }
+  header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 2em;
+    width: 100%;
+  }
 
-    @media screen and (max-width: 520px) {
-        header { 
-            padding: 2em 0;
-        }
+  @media screen and (max-width: 520px) {
+    header {
+      padding: 2em 0;
     }
+  }
 </style>
 
-<header>
-    <Logo />
-    <Nav current={current} />
+<header class="sticky top-0 z-50 w-full bg-transparent backdrop-blur">
+  <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+    <nav class="mt-4 flex space-x-8 uppercase tracking-[0.2em] text-[10px] md:text-xs">
+        <a href="/" class="text-white/80 hover: text-rose-300 transition-colors">Kat's Korner</a>
+    </nav>
+  </div>
 </header>

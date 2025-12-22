@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/Layout.astro'
 title: 'My first post!!'
 pubDate: 2022-07-01
 description: 'This is the first post of my new blog.'
@@ -22,4 +23,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my journey as 
 
 ## What's next
 
-I gotta make this look pretty
+My son is a genius akjsfhssdfs

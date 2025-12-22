@@ -1,22 +1,27 @@
+---
+// src/layouts/Layout.astro
+const {title} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[url('/assets/aes-purp-wpp.avif')] bg-cover text-white">
+	
+	<div class="min-h-screen w-full bg-black/40 backdrop-blur-[2px] flex flex-col"></div>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+		<h1 class="text-2xl font-bold"> Kat's Korner</h1>
+		<nav class="p-8 flex justify-center space-x-8 uppercase tracking-widest text-sm">
+			<a href ="/posts/post-1/" class= "hover:text-rose-400 transition-colors">Blog</a>
+		</nav>
+    <main class="p-6">
+      <slot />
+    </main>
+</body>
+</html>

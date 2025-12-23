@@ -16,7 +16,7 @@ export const games = [
     title: "Ripple",
     instructions: "WASD to move \nE = interact (dialogue) \nDrag water buckets to villagers",
     screenshots: ["/assets/ripple-ss-1.png","/assets/ripple-ss-2.png"],
-    previewText: "A dreamy underwater game with surprising vision mechanics",
+    previewText: "Navigate conflicts in a village strained by water scarcity",
     description: "Ripple is a visual novel that places you in the heart of a divided village facing a growing crisis of water scarcity. Created for the 2025 Games for Change Student Challenge, Ripple explores the power of communication and empathy in a world where resources must be shared to preserve peace.",
     previewImage: "/assets/ripple-cover.png",
     embedUrl: "/games/Ripple/index.html",

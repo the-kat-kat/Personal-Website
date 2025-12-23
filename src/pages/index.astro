@@ -10,14 +10,14 @@ import { games } from "../data/games.js";
 
 <!-- Projects -->
 <div class="mb-16 w-full">
-  <h1 class="text-3xl justify-self-center mb-4">Projects</h1>
+  <h1 class="text-3xl justify-self-center mb-4">Games</h1>
   <div
     class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-9 max-w-5xl mx-auto"
   >
     {
       games.map((game) => (
         <a href={`/games/${game.slug}`} class="group block">
-          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:bg-white/10 shadow-xl">
+          <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden transition-all hover:scale-[1.06] hover:bg-white/10 shadow-xl">
             <img
               src={game.previewImage}
               alt={game.title}
@@ -28,7 +28,7 @@ import { games } from "../data/games.js";
               <h2 class="text-2xl text-light-ocean group-hover:text-white">
                 {game.title}
               </h2>
-              <p class="text-white/60 mt-2">{game.description}</p>
+              <p class="text-white mt-2">{game.description}</p>
             </div>
           </div>
         </a>

@@ -8,20 +8,80 @@ import Layout from "../layouts/Layout.astro";
   class="w-3xl p-6 bg-mid-ocean/20 backdrop-blur-sm rounded-2xl border justify-center place-self-center text-center border-white"
 >
   <h1 class="text-2xl">~I like a lot of stuff~</h1>
-  <p>Here's a look at some images I've pulled from my Pinterest boards</p>
+  <p>
+    Here's a look at some images I've pulled from my Pinterest boards (I love
+    Pinterest)
+  </p>
 </div>
 
-<div class="w-6xl p-6 gap-4 justify-center place-self-center flex flex-col">
-  <div class="gap-4 w-full items-center flex flex-row">
+<div class="w-5/6 p-6 gap-4 justify-center place-self-center grid grid-cols-2">
     <div
-      class="p-6 w-full text-center backdrop-blur-sm rounded-2xl border border-white"
+      class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white"
     >
+      <!--Ghibli-->
       <h1 class="text-2xl">Ghibli</h1>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!--Totoro -->
+        <div
+          class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+        >
+          <img
+            src="/assets/totoro.gif"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="text-white text-base"> My Neighbor Totoro </span>
+          </div>
+        </div>
+        <!--Kiki -->
+        <div
+          class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+        >
+          <img
+            src="/assets/kiki.gif"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="text-white text-base"> Kiki's Delivery Service </span>
+          </div>
+        </div>
+        <!--Howl's moving castle -->
+        <div
+          class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+        >
+          <img
+            src="/assets/howl.avif"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="text-white text-base"> Howl's Moving Castle </span>
+          </div>
+        </div>
+        <!--Spirited Away -->
+        <div
+          class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+        >
+          <img
+            src="/assets/spirited-away.webp"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <span class="text-white text-base"> Spirited Away </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div
-      class="p-6 w-full text-center backdrop-blur-sm rounded-2xl border border-white"
-    >
-      <h1 class="text-2xl">Cats</h1>
-    </div>
-  </div>
 </div>

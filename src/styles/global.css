@@ -3,6 +3,8 @@
 
 @theme {
     --font-family-sans: "CatSong", ui-sans-serif, system-ui, sans-serif;
+
+    --color-mid-ocean: #1266c7;
 }
 
 @font-face {

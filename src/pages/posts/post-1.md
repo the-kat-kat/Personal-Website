@@ -22,4 +22,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my journey as 
 2. **Making Pages**: I then learned how to make pages by creating a new '.astro'
 
 ## What's next
-
+Well Idk 

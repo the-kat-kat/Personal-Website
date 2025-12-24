@@ -11,9 +11,12 @@ h1, h2, h3, h4 {
   font-family: 'CatSong', sans-serif;
 }
 
-:root {
-    font-family: "CatSong", sans-serif;
+@theme{
     --font-family-sans: "CatSong", ui-sans-serif, system-ui, sans-serif;
     --color-mid-ocean: #1266c7;
     --color-light-ocean: #79d5fc;
+}
+
+:root{
+    font-family: "CatSong", sans-serif;
 }

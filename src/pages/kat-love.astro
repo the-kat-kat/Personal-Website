@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout />
 
 <div
-  class="w-3xl p-6 bg-mid-ocean/20 backdrop-blur-sm rounded-2xl border justify-center place-self-center text-center border-white"
+  class="w-3xl p-6 bg-mid-ocean/20 backdrop-blur-sm rounded-2xl border justify-center place-self-center text-center border-white hover:scale-[1.05] hover:shadow-[0_0_20px_7px_rgba(255,255,255,0.5)] transition-transform"
 >
   <h1 class="text-2xl">~I like a lot of stuff~</h1>
   <p>
@@ -14,10 +14,10 @@ import Layout from "../layouts/Layout.astro";
   </p>
 </div>
 
-<div class="w-5/6 p-6 gap-4 justify-center place-self-center grid grid-cols-2">
+<div class="w-11/12 p-6 gap-8 justify-center place-self-center grid grid-cols-2 ">
   <!--Ghibli-->
   <div
-    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white"
+    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white hover:scale-[1.05] hover:shadow-[0_0_20px_7px_rgba(255,255,255,0.5)] transition-transform"
   >
     <h1 class="text-2xl">Ghibli</h1>
     <p class="mb-2">my artistic inspiration since childhood~</p>
@@ -85,76 +85,71 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <!--Art-->
+  <!--Cats-->
   <div
-    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white"
+    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white hover:scale-[1.05] hover:shadow-[0_0_20px_7px_rgba(255,255,255,0.5)] transition-transform"
   >
-    <h1 class="text-2xl">Artists</h1>
-    <p class="mb-2">My fav artists &lt;3</p>
+    <h1 class="text-2xl">Cats</h1>
+    <p class="mb-2">they make the world a better place &lt;3</p>
     <div class="grid grid-cols-2 gap-4">
-      <!--Totoro -->
+      <!--Blep -->
       <div
         class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
       >
-        <a
-          class="pointer-events-auto"
-          href="https://www.youtube.com/watch?v=v6HrOqKFiMg"
-        >
-          <img
-            src="/assets/bs-1.png"
+        <img
+            src="/assets/blep.jpeg"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-        </a>
 
         <div
           class="pointer-events-none absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span class="text-white text-base"> Juggernaut </span>
+          <span class="text-white text-base"> blep </span>
         </div>
       </div>
-      <!--Kiki -->
+      <!--Derp -->
+     <div
+        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+      >
+        <img
+            src="/assets/derp.jpeg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+        <div
+          class="pointer-events-none absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="text-white text-base"> bloop </span>
+        </div>
+      </div>
+      <!--Duck -->
       <div
         class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
       >
         <img
-          src="/assets/kiki.gif"
+          src="/assets/duck.jpeg"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
         <div
           class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span class="text-white text-base"> Kiki's Delivery Service </span>
+          <span class="text-white text-base"> boop </span>
         </div>
       </div>
-      <!--Howl's moving castle -->
+      <!--Jump -->
       <div
         class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
       >
         <img
-          src="/assets/howl.avif"
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          src="/assets/jump.jpeg"
+          class="w-full h-full object-cover  overflow-hidden transition-transform duration-500 group-hover:scale-110"
         />
 
         <div
           class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span class="text-white text-base"> Howl's Moving Castle </span>
-        </div>
-      </div>
-      <!--Princess Mononoke -->
-      <div
-        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
-      >
-        <img
-          src="/assets/princess.gif"
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-
-        <div
-          class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <span class="text-white text-base"> Princess Mononoke </span>
+          <span class="text-white text-base"> blaaa </span>
         </div>
       </div>
     </div>
@@ -162,7 +157,7 @@ import Layout from "../layouts/Layout.astro";
 
   <!--Bailey-->
   <div
-    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white"
+    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white hover:scale-[1.05] hover:shadow-[0_0_20px_7px_rgba(255,255,255,0.5)] transition-transform"
   >
     <h1 class="text-2xl">Bailey Sok</h1>
     <p class="mb-2">
@@ -230,19 +225,94 @@ import Layout from "../layouts/Layout.astro";
           <span class="text-white text-base"> 2 Step </span>
         </div>
       </div>
-      <!--Princess Mononoke -->
+      <!--Go Quietly -->
+      <div
+        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+      >
+      <a
+          class="pointer-events-auto"
+          href="https://www.youtube.com/watch?v=hyCYGrcK_t8"
+        >
+        <img
+          src="/assets/bs-4.png"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+         </a>
+
+        <div
+          class="pointer-events-none absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="text-white text-base"> Go Quietly </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sugar-->
+  <div
+    class="p-6 w-full text-center bg-mid-ocean/50 backdrop-blur-sm rounded-2xl border border-white hover:scale-[1.05] hover:shadow-[0_0_20px_7px_rgba(255,255,255,0.5)] transition-transform"
+  >
+    <h1 class="text-2xl">Sugar</h1>
+    <p class="mb-2">i can't live without it</p>
+    <div class="grid grid-cols-2 gap-4">
+      <!--Tiramisu-->
       <div
         class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
       >
         <img
-          src="/assets/princess.gif"
+            src="/assets/blep.jpeg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+        <div
+          class="pointer-events-none absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="text-white text-base"> blep </span>
+        </div>
+      </div>
+      <!--Mochi-->
+     <div
+        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+      >
+        <img
+            src="/assets/derp.jpeg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+        <div
+          class="pointer-events-none absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="text-white text-base"> bloop </span>
+        </div>
+      </div>
+      <!--Mint Chip-->
+      <div
+        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+      >
+        <img
+          src="/assets/duck.jpeg"
           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
         <div
           class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span class="text-white text-base"> Princess Mononoke </span>
+          <span class="text-white text-base"> boop </span>
+        </div>
+      </div>
+      <!--Egg Tart-->
+      <div
+        class="group relative overflow-hidden rounded-2xl cursor-pointer border border-white/50"
+      >
+        <img
+          src="/assets/jump.jpeg"
+          class="w-full h-full object-cover  overflow-hidden transition-transform duration-500 group-hover:scale-110"
+        />
+
+        <div
+          class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          <span class="text-white text-base"> blaaa </span>
         </div>
       </div>
     </div>

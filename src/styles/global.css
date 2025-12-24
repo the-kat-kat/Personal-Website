@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-
-@theme {
-    --font-family-sans: "CatSong", ui-sans-serif, system-ui, sans-serif;
-
-    --color-mid-ocean: #1266c7;
-    --color-light-ocean: #79d5fc;
-}
-
 @font-face {
     font-family: 'CatSong';
     src: url('/fonts/catsong.ttf') format('truetype');
@@ -21,4 +13,7 @@ h1, h2, h3, h4 {
 
 :root {
     font-family: "CatSong", sans-serif;
+    --font-family-sans: "CatSong", ui-sans-serif, system-ui, sans-serif;
+    --color-mid-ocean: #1266c7;
+    --color-light-ocean: #79d5fc;
 }
